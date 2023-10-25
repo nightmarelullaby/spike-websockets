@@ -43,7 +43,7 @@ export default function Home() {
   }
   return (
     <main ref={ref} className="relative h-screen overflow-y-scroll">
-    <DynamicSocketInit URL={"http://localhost:3001"} token="123"/>
+    <DynamicSocketInit URL={"https://backend-spike.onrender.com"} token="123"/>
         <div className="h-fit-content fixed z-30 p-2 w-full top-0 bg-neutral-800">
          <User   
           name="room"
