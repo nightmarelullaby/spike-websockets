@@ -2,11 +2,12 @@
 import { io } from 'socket.io-client';
 import {useEffect,useState} from "react"
 import {useSocketStore} from "../store/useSocketStore"
-export default function SocketController({token,id,URL}){
-	const {setCurrentSocket} = useSocketStore()
+
+export default function SocketController({token, URL}){
+	useSocketStore()
 	if(!token) return
 	const [isConnected, setIsConnected] = useState(false);
-	const [socket,setSocket] = useState( io(URL,{auth:{token},autoConnect: false}));
+	const [socket] = useState( io(URL,{auth:{token},autoConnect: false}));
 
 	useEffect(() => {
         useSocketStore.setState({currentSocket:socket})
