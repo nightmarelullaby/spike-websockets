@@ -1,11 +1,9 @@
 "use client"
-import {User,Input,Textarea,Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, Divider, Image} from "@nextui-org/react";
 import {useState} from "react"
+
 export default function ChatMessage ({sender,content,author,date}){
-	const [textContent,setTextContent] = useState(content.length > 200 ? content.slice(0,200):content)
-	const handleExtend = () => {
-		return setRestTextVisible(true)
-	}
+	const [textContent] = useState(content.length > 200 ? content.slice(0,200):content)
 	return <>
 		{!sender && <Card className="max-w-[400px] rounded-ss-none bg-blue-500">
           <CardHeader className="flex gap-3">
