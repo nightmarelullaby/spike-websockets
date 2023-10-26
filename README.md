@@ -4,8 +4,9 @@ In this guide, we will cover briefly: what are websockets, how much they differ 
 
 ### Table of content
 
-#2. Understanding HTTP protocol
-2. Understanding HTTP protocol 
+#### 2. Understanding HTTP protocol
+#### 3. Websockets
+
 3. Websockets
 
 ----------------------------------------------------------------------
