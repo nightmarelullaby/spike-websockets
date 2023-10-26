@@ -1,12 +1,12 @@
 # 1. Fundamentals
 
-### Introduction
+## Introduction
 
 In this guide, we will cover briefly: what are websockets, how much they differ from HTTP protocol, when they are useful, and a little explanation about how http protocols works. Also, providing example code we hope to acheive a better understanding of this content.
 
 -------------------------------------------------------
 
-### Understanding HTTP protocol
+## Understanding HTTP protocol
 
 #### What is HTTP protocol?
 
@@ -14,7 +14,7 @@ Fundamentally, HTTP is a communication protocol that enables clients (such as a 
 
 For example, HTML documents, images, application data (JSON), and more.
 
-### How it works?
+## How it works?
 
 When a client does a request, the server sends a response that includes not only the requested content, but also relevant information about the request.
 
@@ -22,7 +22,7 @@ Is important to keep in mind that **after server returns this response to client
 ![alt text](https://images.ctfassets.net/ee3ypdtck0rk/1kp3L78PA3GizIQ9P8fPFZ/8fc93fc45005d6d0122c08f00d64873f/http-request-response-cycle.png?w=1841&h=653&q=50&fm=webp)
 
 
-### It is possible to make a realtime connection only with HTTP?
+## It is possible to make a realtime connection only with HTTP?
 
 Short answer: Yes, but is complicated.
 
@@ -43,7 +43,7 @@ There are other possibles solutions like HTTP Streaming, but all those have seri
 
 -----------------------------------------------------------------------
 
-### Websockets
+## Websockets
 
 #### What are WebSockets?
 
@@ -62,7 +62,7 @@ In simple terms, this means data can flow in both directions over the same conne
 
 -----------------------------------------------------------------------
 
-### HTTP or Websockets?
+## HTTP or Websockets?
 
 So far, looks great, but, which are the benefits of Websockets and HTTP?
 
@@ -93,8 +93,8 @@ You will see in a second that implementing Websockets is much more simple than y
 
 # 2. Implementing Socket.IO
 
-### Creating a server with Node.js
-#### Initializing 
+## Creating a server with Node.js
+### Initializing 
 
 First, let's begin creating a basic server with `http` module provided by Node.js.
 
@@ -179,7 +179,7 @@ io.on("connection", (socket) => {
 ```
 
 ### Working with Next.js
-#### Initializing from client
+### Initializing from client
 
 For this demo, we will be using Next.js to demonstrate how to connect our React app with this basic server.
 
@@ -485,7 +485,7 @@ export default function Home() {
 ```
 
 # 3. Socket.IO library
-### Why Socket.IO?
+## Why Socket.IO?
 
 The reasons why we decide using this library are mainly 3.
 
@@ -494,7 +494,7 @@ The reasons why we decide using this library are mainly 3.
 2. **Scalable**: It has the advantage to scale to apps with multiple servers.
     
 3. **Easy to learn and large community support**: Another important key is its support by the community beyond. This way, whenever we encounter with a question or problem in our code, we will be covered by community.
-### Advantages against others
+## Advantages against others
 
 - Socket.IO supports multiplexing through namespaces. Making use of namespaces enables you to minimize the number of TCP connections used, and save socket ports on the server. 
     
@@ -504,7 +504,7 @@ The reasons why we decide using this library are mainly 3.
     
 - Socket.IO provides a configurable Ping/Pong heartbeat mechanism, allowing you to detect if a connection is alive or not. Additionally, if and when a client gets disconnected, it automatically reconnects.
 
-### Official docs
+## Official docs
 
 You can read full Socket.IO docs here: https://socket.io/docs/v4/
 
