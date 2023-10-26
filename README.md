@@ -1,18 +1,14 @@
-# 1. Introduction
+# 1. Fundamentals
+
+### Introduction
 
 In this guide, we will cover briefly: what are websockets, how much they differ from HTTP protocol, when they are useful, and a little explanation about how http protocols works. Also, providing example code we hope to acheive a better understanding of this content.
 
-### Table of content
+-------------------------------------------------------
 
-1. Introduction  
-2. Understanding HTTP protocol 
-3. Websockets
+### Understanding HTTP protocol
 
-----------------------------------------------------------------------
-
-# 2. Understanding HTTP protocol
-
-### What is HTTP protocol?
+#### What is HTTP protocol?
 
 Fundamentally, HTTP is a communication protocol that enables clients (such as a web browser) and servers to share information.
 
@@ -47,15 +43,15 @@ There are other possibles solutions like HTTP Streaming, but all those have seri
 
 -----------------------------------------------------------------------
 
-# 3. Websockets
+### Websockets
 
-### What are WebSockets?
+#### What are WebSockets?
 
 Like HTTP, [WebSockets](https://ably.com/topic/websockets) is a communication protocol that enables clients  and servers to communicate with one another
 
 Unlike HTTP with its request-response model, WebSockets are specifically designed to enable realtime bidirectional communication between the server and client. 
 
-### What are they used for?
+#### What are they used for?
 
 They are used to **create communication in realtime.** This means the server can push realtime updates as soon as they become available without waiting for the client to issue a request.
 
@@ -66,7 +62,7 @@ In simple terms, this means data can flow in both directions over the same conne
 
 -----------------------------------------------------------------------
 
-# 4. HTTP or Websockets?
+### HTTP or Websockets?
 
 So far, looks great, but, which are the benefits of Websockets and HTTP?
 
@@ -95,9 +91,9 @@ You will see in a second that implementing Websockets is much more simple than y
 
 ----------------------------------------------------------------------------------------
 
-# 5. Implementing Socket.IO
+# 2. Implementing Socket.IO
 
-## Creating a server with Node.js
+### Creating a server with Node.js
 #### Initializing 
 
 First, let's begin creating a basic server with `http` module provided by Node.js.
@@ -182,7 +178,7 @@ io.on("connection", (socket) => {
 });
 ```
 
-## Working with Next.js
+### Working with Next.js
 #### Initializing from client
 
 For this demo, we will be using Next.js to demonstrate how to connect our React app with this basic server.
@@ -310,7 +306,7 @@ It's important to add socket.off in our useEffect cleanup function.
 Also, importing dynamically our component without ``ssr`` will prevent multiple connections from the same client caused by Next.js SSR.
 
 
-## Returning to backend
+### Returning to backend
 
 In the backend, we listen to this event ``'client:join-room'``:
 
@@ -338,7 +334,7 @@ We can think in room as **places where only the users inside it can communicate 
 
 Official docs: https://socket.io/docs/v4/rooms/
 
-## Broadcasting events
+#### Broadcasting events
 
 
 So far, we have joined our client to a room. But what if we want this user to send a message with all the people inside the room?.
@@ -488,8 +484,8 @@ export default function Home() {
 
 ```
 
-# 6. Socket.IO library
-## Why Socket.IO?
+# 3. Socket.IO library
+### Why Socket.IO?
 
 The reasons why we decide using this library are mainly 3.
 
@@ -498,7 +494,7 @@ The reasons why we decide using this library are mainly 3.
 2. **Scalable**: It has the advantage to scale to apps with multiple servers.
     
 3. **Easy to learn and large community support**: Another important key is its support by the community beyond. This way, whenever we encounter with a question or problem in our code, we will be covered by community.
-## Advantages against others
+### Advantages against others
 
 - Socket.IO supports multiplexing through namespaces. Making use of namespaces enables you to minimize the number of TCP connections used, and save socket ports on the server. 
     
@@ -508,7 +504,7 @@ The reasons why we decide using this library are mainly 3.
     
 - Socket.IO provides a configurable Ping/Pong heartbeat mechanism, allowing you to detect if a connection is alive or not. Additionally, if and when a client gets disconnected, it automatically reconnects.
 
-## Official docs
+### Official docs
 
 You can read full Socket.IO docs here: https://socket.io/docs/v4/
 
