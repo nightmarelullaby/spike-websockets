@@ -138,7 +138,7 @@ io.on("connection", (socket) => {
 
 - ``on``: is a method used for listening events.
     
-- ``"connection"``: is the name of the event we are listening. In this case, we are listening for every client that connects with our server.
+- ``"connection"``: is the name of the event we are listening. In this case, "connection" is a reserved event for listening every client that connects with our server.
     
 - ``callback function``: what should happen when this events occurs.
 
