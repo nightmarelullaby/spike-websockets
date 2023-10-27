@@ -114,7 +114,7 @@ const httpServer = createServer( (request, response) => {
 const io = new Server(httpServer, {   
     cors:{
 		origin:"*",
-}});
+	}});
 ```
 
 
@@ -269,7 +269,7 @@ Here we are creating a new useEffect for listening socket changes, so we can set
 
 Finally, to sending events we do the following
 
----> ``./page.jsx
+---> ``./page.jsx``
 
 ```
 import dynamic from 'next/dynamic'
@@ -401,7 +401,7 @@ In our case, we want to broadcast a response in our room.
 
 So we do the following:
 
----> ``index.js
+---> ``index.js``
 
 ```
    socket.on('client:send-message',async (data) => {
