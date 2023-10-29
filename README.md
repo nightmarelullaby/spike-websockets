@@ -299,7 +299,7 @@ return (
 }
 ```
 
-Here, we are putting a emit method inside a useEffect and emiting a event with it's name and in the second parameter, any data we want. In this case, we will be pasing a string called room. 
+Here, we are putting a emit method inside a useEffect and emiting a event with it's name and in the second parameter, any data we want. In this case, we will be pasing a string called "room1". 
 
 It's important to add socket.off in our useEffect cleanup function. 
 
