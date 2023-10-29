@@ -418,7 +418,7 @@ So we do the following:
 
 We are getting all the rooms of the socket and filtering it, because we got two:  a room with the ID of the socket and the room (in our case "room1") we want.
 
-After that, we just broadcast the message received from client to all sockets in that particular room. Broadcast doesn't send the response back to the client that made it.
+After that, we just broadcast the message received from client to all sockets in that particular room. Broadcasting doesn't send the response back to the client that made it.
 
 #### Client
 
